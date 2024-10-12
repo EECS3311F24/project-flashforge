@@ -6,3 +6,5 @@
 | Tamjeed Shariff     | A         | 218856823           | shariff6@my.yorku.ca                             | 2185525628                    | hound09                  |
 
 **Discord Chat/Server Invite :** https://discord.gg/TvWBNPWKUx
+
+**Trello Link :** https://trello.com/invite/b/66fd54fc1bbe2ac2c2760111/ATTIf4632a2993b1f346f1375090fdad57e27CBC7821/flashforge
