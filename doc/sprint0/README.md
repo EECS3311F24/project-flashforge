@@ -1,7 +1,7 @@
 # Flashforge
 
 ## Motivation
-Flashforge is a study tool designed to help users create, manage, and use flashcards across various subjects. It aims to improve learning and knowledge retention through customizable decks and active recall techniques. The project was created to address the need for a streamlined, easy-to-use flashcard platform.
+Flashforge is a study tool designed to help users create, manage, and use flashcards across various subjects, it also serves as a study hub geared towards computer science and software engineering majors. It aims to improve learning and knowledge retention through customizable decks and active recall techniques while encouraging collaboration and sharing. The project was created to address the need for a centralized study platform for students in software related fields.
 
 ## Installation
 ### Prerequisites
