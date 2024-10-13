@@ -15,3 +15,11 @@ Kevin has a midterm next week and needs to review content for his software desig
 Professor Donald is finding his students this semester to be very engaged in his course, he sees the drive in them and their desire to learn which motivates him to do his best as an instructor. Donald creates personalized notes for his class and while they could be posted to EClass, he wants future students with different instructors to have access to the same material. A site geared towards current and future students of EECS3215 would help fill his desire of pleasing his students and developing the future of embedded systems developers.
 
 **Key Principle:** Efficient navigation as per user desire. The website should provide an experience catered to each user which prevents undesired topics from being seen. Each user should be presented a clean and non-bloated page with content they intend to see.
+
+### User Interface & Setup
+Figma Prototype: https://www.figma.com/proto/Uev8F3P6TTrRyGSRB8PI6K/Flashforge?node-id=603-83&t=mKJWK0iF44t3L99m-1
+
+![alt text](image-1.png) ![alt text](image-2.png)
+
+![alt text](image-3.png) ![alt text](image-4.png)
+![alt text](image-5.png)
