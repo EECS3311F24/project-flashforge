@@ -23,11 +23,17 @@ Flashforge is a study tool designed to help users create, manage, and use flashc
    ```bash
    npm install
    ```
-4. Set up MongoDB (ensure MongoDB is running).
-5. Start the project:
+4. Set up MongoDB:
+   - Ensure MongoDB is running locally or configure a MongoDB Atlas database.
+   - Add a `.env.local` file in the root directory with your MongoDB URI:
+     ```
+     MONGODB_URI=your_mongodb_connection_string
+     ```
+5. Start the project in development mode:
    ```bash
-   npm start
+   npm run dev
    ```
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
 ## Contribution
 We follow these guidelines for contributions:
@@ -35,6 +41,12 @@ We follow these guidelines for contributions:
 - **Git Flow**: We use `git flow`. Work on features in `feature/your-feature-name` branches and bug fixes in `fix/your-fix-name` branches.
 - **Branches**: 
   - Main branch: `main`
-  - Development branches follow the naming convention `dev/[name]`
+  - Development branches follow the naming convention `dev/[name]` or `dev/[name0]`
+- **Pull Requests**: Development is done in `dev/[name]` branches. Once a development branch is complete, create a pull request to merge into the `main` branch.
 - **Issue Tracking**: We use GitHub Issues for tracking bugs and features.
-- **Pull Requests**: Submit pull requests to `dev/[name]` after making changes.
+
+## Technology Stack
+- **Frontend**: Next.js (React framework)
+- **Backend**: MongoDB for database management
+- **State Management**: React Hooks, Context API
+- **Styling**: Tailwind CSS
