@@ -19,7 +19,25 @@ Professor Donald is finding his students this semester to be very engaged in his
 ### User Interface & Setup
 Figma Prototype: https://www.figma.com/proto/Uev8F3P6TTrRyGSRB8PI6K/Flashforge?node-id=603-83&t=mKJWK0iF44t3L99m-1
 
-![alt text](image-1.png) ![alt text](image-2.png)
+### **Setup**
 
-![alt text](image-3.png) ![alt text](image-4.png)
-![alt text](image-5.png)
+1. **Light Mode Home Page**:  
+   ![alt text](imgs/image-3.png)  
+   The light theme offers a clean and crisp interface. The flashcard categories are clearly displayed, including options like Software Design, Java Basics, Algorithms, and Data Structures. The light background enhances readability and provides a calm study environment.
+
+2. **Dark Mode Home Page**:  
+   ![alt text](imgs/image-2.png)  
+   The dark theme option for the home page enhances usability in low-light environments. It shows the same flashcard topics as the light mode, but the sleek dark background improves focus and reduces eye strain, ideal for late-night study sessions.
+
+3. **Login and Add User Page**:  
+   ![alt text](imgs/image-4.png)  
+   The login page and new user registration form allow users to either log in or create an account by providing their name, email, and password. The simple design ensures users can quickly access their accounts without confusion.
+
+4. **Database Backend (MongoDB)**:  
+   ![alt text](imgs/image-1.png)  
+   This image shows the MongoDB database backend, where user data is stored. It demonstrates successful user entries, including name, email, and password. This backend ensures user information is securely saved for future access.
+
+5. **Create a New Deck Feature**:  
+   ![alt text](imgs/image.png)  
+   This section showcases the "Create a New Deck" feature, where users can input their custom flashcards with questions and answers. It provides a straightforward interface for adding multiple flashcards to a new deck, making the process intuitive.
+
