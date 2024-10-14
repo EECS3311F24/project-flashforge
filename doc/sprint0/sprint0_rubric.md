@@ -98,7 +98,7 @@
 
     Your mark: 1
    
-  Setup Total Mark: 1 / 3
+  Setup Total Mark: 3 / 3
 
 ---
 ## Documentation: README.md (max 3 marks)
