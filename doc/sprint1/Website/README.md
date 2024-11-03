@@ -1,4 +1,3 @@
-```markdown
 # FlashForge Project Website
 
 Welcome to the FlashForge Website Repository.
@@ -7,6 +6,7 @@ Welcome to the FlashForge Website Repository.
 
 The project consists of the following main directories:
 
+```
 .
 └── Website          # Main directory for the Next.js application
     ├── components   # React components used throughout the application
