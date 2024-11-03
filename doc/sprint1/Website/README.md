@@ -10,7 +10,7 @@
    npm install
    ```
 
-2. Start the development server:  
+2. Start the development server:
    In the `~/project-flashforge/doc/sprint1/Website` directory, run:
 
    ```bash
