@@ -57,7 +57,7 @@
 
 The following diagram provides an overview of the system's components and their interactions:
 
-![System Architecture Diagram](SoftwareArchitecture.png)
+![System Architecture Diagram](../Imgs/SoftwareArchitecture.png)
 
 - **Frontend to Backend**: API requests handle user interactions, flashcard management, and authentication.
 - **Backend to Database**: CRUD operations for storing user data, flashcard decks, and session data.

@@ -1,16 +1,16 @@
 # **Sprint 1 Planning Meeting (Sprint1)**
 
 ### Meeting Details
-- **Date:** Oct 19th, Tuesday after 3311 Lab  
-- **Time:** 11:30 AM  
-- **Location:** Online (Discord server)  
+- **Date:** Oct 19th, Tuesday after 3311 Lab
+- **Time:** 11:30 AM
+- **Location:** Online (Discord server)
 - **Agenda:** Discuss release goals, key features/epics, and assign tasks.
 
 ### Participants
 - **Tamjeed Shariff** - Backend
 - **Leroy-David Musa** - Backend
 - **Mame Mor Mbacke** - Frontend
-- **Oluwasegun Oroge** - Frontend  
+- **Oluwasegun Oroge** - Frontend
 
 *Note: All team members participated in this meeting.*
 
@@ -23,22 +23,22 @@ The primary objective of Sprint 1 is to establish a basic framework for the proj
 
 ### User Stories for Sprint 1
 **Completed during Sprint 1:**
-- **US-(4-6):** Handiness of pre-existing decks with solutions  
+- **US-(4-6):** Handiness of pre-existing decks with solutions
   *Priority:* High
-- **US-7:** Flipping through flash cards  
+- **US-7:** Flipping through flash cards
   *Priority:* Medium
-- **US-(1,19,20 setup):** User Login  
+- **US-(1,19,20 setup):** User Login
   *Priority:* Low
 
 ---
 
 ### Team Capacity
-- **Total Team Capacity:** 20 hours for the sprint.  
+- **Total Team Capacity:** 20 hours for the sprint.
 - **Individual Capacity:**
   - **Tamjeed Shariff** - Backend: 5 Hours
   - **Leroy-David Musa** - Backend: 5 Hours
   - **Mame Mor Mbacke** - Frontend: 5 Hours
-  - **Oluwasegun Oroge** - Frontend: 5 Hours  
+  - **Oluwasegun Oroge** - Frontend: 5 Hours
 
 *Note: Capacity includes time allocated for meetings, task discussions, and implementation.*
 
@@ -59,7 +59,7 @@ The primary objective of Sprint 1 is to establish a basic framework for the proj
   - **Tamjeed Shariff:** Implement backend logic for decks
   - **Leroy-David Musa:** Implement backend logic for decks
 
-- **US-(1,19,20 setup): User Login**  
+- **US-(1,19,20 setup): User Login**
   *(Setup for future sprints to lay foundational features)*
 
   - **Mame Mor Mbacke:** Frontend design and page layout
