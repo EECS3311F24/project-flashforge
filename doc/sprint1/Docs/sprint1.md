@@ -66,3 +66,5 @@ The primary objective of Sprint 1 is to establish a basic framework for the proj
   - **Oluwasegun Oroge:** Frontend design and page layout
   - **Tamjeed Shariff:** Implement backend logic for login
   - **Leroy-David Musa:** Implement backend logic for login
+### Trello
+**Link:** https://trello.com/invite/b/66fd54fc1bbe2ac2c2760111/ATTI877a6db51548a7f041bf0098173a362fC63320D5/flashforge 
