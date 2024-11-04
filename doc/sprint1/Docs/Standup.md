@@ -1,4 +1,4 @@
-﻿## [October 18, 2024] - Sprint 1 Standup 1S
+﻿## [October 18, 2024] - Sprint 1 Standup 1
 
 **Tamjeed Shariff:**
 
@@ -77,7 +77,7 @@ Ans: Not at the moment
 
 
 
-**[October 24, 2024] - Sprint 1 Standup 2**
+## [October 24, 2024] - Sprint 1 Standup 2
 
 **Tamjeed Shariff:**
 
@@ -155,7 +155,7 @@ Ans: Ran into some bugs while going from deck tab to settings tab
 
 
 
-**[October 31 , 2024] - Sprint 1 Standup 3**
+## [October 31 , 2024] - Sprint 1 Standup 3
 
 **Tamjeed Shariff:**
 
@@ -229,4 +229,3 @@ Ans: By the next standup
 Do you have any blockers?
 
 Ans: Not at the moment
-
