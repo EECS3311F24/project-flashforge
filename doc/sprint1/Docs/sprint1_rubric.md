@@ -112,7 +112,7 @@ Your Mark: 0
     - 0 marks = majority of commit message do not begin with the ticket number of the task followed by a short description of commit changes
     
     
-Your Mark: 0
+Your Mark: 2
     
   - Tasks Distribution (max 3 marks)
     - 3 marks = every team member had at least one task assigned and completed
@@ -122,7 +122,7 @@ Your Mark: 0
 
     Your Mark: 3
 
-Tracking on Trello Total Mark: 7 / 15
+Tracking on Trello Total Mark: 9 / 15
 
 ---
 ## Sprint Completion (Max 10 marks) 
@@ -193,5 +193,5 @@ Tracking on Trello Total Mark: 7 / 15
 
 ## Total Mark
 
-41.5 / 64
+43.5 / 64
 
