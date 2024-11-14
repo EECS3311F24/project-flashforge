@@ -116,15 +116,14 @@ body {
     position: relative;
     bottom: 60px;
     display: flex;
-    margin-right: 500px;
-    margin-top: 15px;
+    top: 15px
 }
 
 /* Shuffle */
 .shuffle {
     position: relative;
-    bottom: 175px;
-    left: 245px;
+    bottom: 103px;
+    right: 250px;
 }
 
 .shuffle button {
@@ -190,7 +189,7 @@ body {
     margin-top: 10px;
     width: 100%;
     max-width: 150px;
-    top: 125px;
+    top: 145px;
     background-color: #e67e22; /* Orange */
     color: white;
     border: none;
@@ -327,14 +326,30 @@ button:hover {
     margin-top: 50px;
 }
 
+.settings-header{
+    text-align: left;
+    margin-left: 36%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .setting {
-    margin: 20px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 3px;
+    margin-bottom: 15px;
 }
 
 .setting input[type="checkbox"] {
     margin-left: 10px;
 }
+
+.custom{
+    margin: 20px;
+    font-size: 16px;
+}
+
+.custom input[type="checkbox"]
 
 /* Default (light) mode styles */
 body {
@@ -344,8 +359,24 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: #121212;
+    background-color: #2f2e2e;
     color: #ffffff;
+}
+
+/* Dropdown Menu */
+.dropdown-text{
+    position: relative;
+    right: 0.35%;
+    display: flex;
+    margin-top: 5px;
+    font-size: 16px;
+
+}
+.dropdown{
+    text-align: left;
+    width: 50;
+    padding: 3px;
+    border-radius: 3px;
 }
 
 /* Add User Section Styles */
