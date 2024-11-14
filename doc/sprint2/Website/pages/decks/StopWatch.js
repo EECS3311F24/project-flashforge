@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-const Timer = () => {
+const StopWatch = () => {
     // Initialize time variable in seconds
-    const startTime = 30 * 60; 
+    const startTime = 0; 
 
     // React state variable  which uses the start time when initialized
     const [time, setTime] = useState(startTime);
 
     const [isRunning, setIsRunning] = useState(false);
 
-    const [inQuizMode, setQuizMode] = useState(false);
+    const [timerOn, setTimer] = useState(false);
 
 
     // Decrement time after component is created
@@ -19,7 +19,7 @@ const Timer = () => {
 
         if (isRunning){
             interval = setInterval(() => {
-                setTime(prevTime => Math.max(prevTime - 1, 0)); // Decrement time by 1, but don't go below 0
+                setTime(prevTime => Math.max(prevTime + 1, 0)); // Decrement time by 1, but don't go below 0
             }, 1000);
 
             // Stop timer when 0 is reached
@@ -39,33 +39,33 @@ const Timer = () => {
         setIsRunning(prev => !prev);
     };
 
-    const resetQuiz = () => {
+    const resetTimer = () => {
         setTime(startTime);
     };
     return (
         // Display time, padStart used to print double 0's
         // Buttons for starting a quiz, and resetting added
         <div>
-           {inQuizMode && (<div className="timer">
+            {timerOn && (<div className="stopwatch">
                 {hours.toString().padStart(2, '0')}:
                 {minutes.toString().padStart(2, '0')}:
                 {seconds.toString().padStart(2, '0')}
             </div>)}
             <button onClick={() => {
                 startStop(); 
-                setQuizMode(true);}}>
-                {time >= startTime  ? 'Quiz Mode' : (isRunning  ? 'Pause' : 'Resume')   } 
+                setTimer(true);}}>
+                {time <= startTime  ? 'Stopwatch' : (isRunning  ? 'Pause' : 'Resume')   } 
             </button>
 
-            {time < startTime ? <button onClick={() => {
-            resetQuiz();
+            {time > startTime ? <button onClick={() => {
+            resetTimer();
             setIsRunning(false);
-            setQuizMode(false);}}>
-                {isRunning && time < startTime ? 'End' : 'End'}
+            setTimer(false);}}>
+                {isRunning && time < startTime ? 'Reset' : 'Reset'}
             </button> : <div> </div>}
             
         </div>
     );
 };
 
-export default Timer;
+export default StopWatch;

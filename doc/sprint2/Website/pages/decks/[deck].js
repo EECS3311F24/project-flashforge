@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Timer from './Timer';
+import StopWatch from './StopWatch';
 import Navbar from '../../components/Navbar'; 
 
 
@@ -113,7 +114,7 @@ const DeckPage = () => {
 
   return (
     <div className="flashcard-container">
-      <div className="timer"><Timer>HERE</Timer></div>
+      <div className="timer"><Timer></Timer></div>
       <h2 className="deck-title">{deck?.replace('-', ' ').toUpperCase()}</h2> {/* Display deck title */}
       {deckData.length > 0 ? (
         <div className={`flashcard ${isFlipped ? 'flipped' : ''}`} onClick={flipCard}>
@@ -128,6 +129,7 @@ const DeckPage = () => {
         <p>No questions available for this topic.</p>
         
       )}
+      <div className="stopwatch"><StopWatch>HERE</StopWatch></div>
       <div className="cardNum">Card: {currentCard+1}/{deckData.length}</div>
       <div className="controls">
         <button onClick={() => setCurrentCard((currentCard - 1 + deckData.length) % deckData.length)}>←</button>
