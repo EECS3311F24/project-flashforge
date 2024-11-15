@@ -20,4 +20,10 @@ if (process.env.NODE_ENV === 'development') {
     clientPromise = client.connect();
 }
 
-export default clientPromise;
+// Export the database connection
+async function getDatabase() {
+    const client = await clientPromise;
+    return client.db('FlashForge'); // Use your database name here
+}
+
+export default getDatabase;
