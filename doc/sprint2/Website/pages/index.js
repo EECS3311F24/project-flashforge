@@ -2,40 +2,36 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Home() {
-  // State for handling the form inputs
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
+  const [preferences, setPreferences] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [decks, setDecks] = useState([
+    { name: 'Software Design', href: '/decks/software-design' },
+    { name: 'Java Basics', href: '/decks/java-basics' },
+    { name: 'Algorithms', href: '/decks/algorithms' },
+    { name: 'Data Structures', href: '/decks/data-structures' },
+  ]);
+
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
     if (storedUsername) {
       setUsername(storedUsername);
     }
+
+    const savedPreferences = JSON.parse(localStorage.getItem('preferences')) || [];
+    setPreferences(savedPreferences);
   }, []);
+
+  // Filter decks by preferences (if selected) and search query
+  const filteredDecks = decks.filter(
+    (deck) =>
+      (preferences.length === 0 || preferences.includes(deck.name)) &&
+      deck.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const handleSignOut = () => {
     localStorage.removeItem('username'); // Remove username from localStorage
     setUsername(''); // Clear the username from state
-  };
-  // Handle form submission to add new users
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const res = await fetch('/api/addUser', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, password }),
-    });
-
-    if (res.ok) {
-      alert('User added successfully');
-      setName('');  // Clear the form
-      setEmail(''); // Clear the form
-      setPassword(''); // Clear the password field
-    } else {
-      alert('Error adding user');
-    }
   };
 
   return (
@@ -61,58 +57,27 @@ export default function Home() {
         <h1>Welcome to FlashForge!</h1>
         <p>Your flashcard tool for Software Engineering and CS students.</p>
 
-        {/* Flashcard Categories */}
-        <div className="deck-categories">
-          <Link href="/decks/software-design">
-            <div className="category-box flash">Software Design</div>
-          </Link>
-          <Link href="/decks/java-basics">
-            <div className="category-box flash">Java Basics</div>
-          </Link>
-          <Link href="/decks/algorithms">
-            <div className="category-box flash">Algorithms</div>
-          </Link>
-          <Link href="/decks/data-structures">
-            <div className="category-box flash">Data Structures</div>
-          </Link>
+        {/* Search Bar */}
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search for a deck..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
         </div>
 
-        {/* Form to Add a New User */}
-        <div className="add-user-section">
-          <h2>Add a New User</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            <button type="submit">Add User</button>
-          </form>
+        {/* Flashcard Categories */}
+        <div className="deck-categories">
+          {filteredDecks.length > 0 ? (
+            filteredDecks.map((deck) => (
+              <Link href={deck.href} key={deck.name}>
+                <div className="category-box flash">{deck.name}</div>
+              </Link>
+            ))
+          ) : (
+            <p>No decks match your search or preferences.</p>
+          )}
         </div>
       </div>
     </div>
