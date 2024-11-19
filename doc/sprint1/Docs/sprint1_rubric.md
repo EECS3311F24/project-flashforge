@@ -48,7 +48,7 @@ Your Mark: 3
     - 1 mark  = two or more stories in Trello Backlog are not point estimated or the point value is not recorded in Trello
     - 0 marks = the majority of stories in Trello Backlog are not point estimated or the point value is not recorded in Trello
 
-    Your Mark: 0
+    Your Mark: 2
 
   - Prioritized	(max 4 marks)
     - 4 marks = all stories in Trello Backlog are prioritized in the order of value they bring to the product, make the product competitive and desirable to the users. Additionally, they match with the selection made in Release Planning meeting.
@@ -65,7 +65,7 @@ Your Mark: 3
 
     Your Mark: 2 
 
-  User Stories Total Mark: 8 / 12
+  User Stories Total Mark: 10 / 12
 
 ---
 ## Tracking on Trello  (max 4 marks) 
@@ -131,7 +131,7 @@ Tracking on Trello Total Mark: 9 / 15
   - Started stories that are incomplete will be counted
   - Mark Breakdown: [x = Percentage of story points completed * 10]
 
-  Your Mark: 1.5 / 10
+  Your Mark: 3.5 / 10
 
 ---
 ## System Design (PDF or MD file or another suitable format) (max 10 marks) 
@@ -193,5 +193,5 @@ Tracking on Trello Total Mark: 9 / 15
 
 ## Total Mark
 
-43.5 / 64
+47.5 / 64
 
