@@ -10,7 +10,7 @@ export default function CreateDeck() {
     const handleCreateDeck = async (e) => {
         e.preventDefault();
 
-        const userId = localStorage.getItem('userId'); // Get user ID from local storage or auth context
+        const userId = localStorage.getItem('userId'); // Ensure the user ID is stored in localStorage
         if (!userId) {
             setMessage('You need to log in to create a deck.');
             return;
@@ -26,9 +26,9 @@ export default function CreateDeck() {
             const data = await response.json();
             if (response.ok) {
                 setMessage('Deck created successfully!');
-                setDeckName('');
+                setDeckName(''); // Reset form fields
                 setDescription('');
-                router.push('/my-decks'); // Redirect to "My Decks" page
+                router.push('/my-decks'); // Redirect to the "My Decks" page
             } else {
                 setMessage(data.message || 'Error creating deck.');
             }
@@ -53,7 +53,17 @@ export default function CreateDeck() {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
-                <button type="submit">Create Deck</button>
+                <div className="button-container">
+                    <button type="submit">Create Deck</button>
+                    {/* This "Finish" button could also be used to finalize the creation */}
+                    <button
+                        type="button"
+                        onClick={() => router.push('/my-decks')} // Navigate back to "My Decks" page directly
+                        className="finish-button"
+                    >
+                        Finish
+                    </button>
+                </div>
             </form>
             <p>{message}</p>
         </div>

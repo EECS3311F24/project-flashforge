@@ -38,10 +38,13 @@ export default function Home() {
     <div className="app-container">
       {/* Sidebar */}
       <div className="sidebar">
-        <Link href="/" className="active">Home</Link>
-        <Link href="/login">Login</Link>
-        <Link href="/create">Create Deck</Link>
-        <Link href="/settings">Settings</Link>
+        <ul>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/login">Login</Link></li>
+          {username && <li><Link href="/my-decks">My Decks</Link></li>}
+          <li><Link href="/create">Create Deck</Link></li>
+          <li><Link href="/settings">Settings</Link></li>
+        </ul>
         {username && (
           <div>
             <p className="username-display">Logged in as: {username}</p>
@@ -51,7 +54,6 @@ export default function Home() {
           </div>
         )}
       </div>
-
       {/* Main Content */}
       <div className="main-content">
         <h1>Welcome to FlashForge!</h1>

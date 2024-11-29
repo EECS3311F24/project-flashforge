@@ -3,14 +3,18 @@ import { useRouter } from 'next/router';
 import Timer from './Timer';
 import StopWatch from './StopWatch';
 import Navbar from '../../components/Navbar'; 
+import axios from 'axios';
 
-
-
+function isValidObjectId(id) {
+  return /^[0-9a-fA-F]{24}$/.test(id);
+}
 const DeckPage = () => {
   const router = useRouter();
   const { deck } = router.query; // Get the deck name from the route
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [deckData, setDeckData] = useState([]);
+  const [deckTitle, setDeckTitle] = useState('');
 
   // Define deck data for each topic
   const deckDataMap = {
@@ -107,15 +111,41 @@ const DeckPage = () => {
 ]
   };
 
-  // Get the relevant data based on the deck name
-  const deckData = deckDataMap[deck] || []; // Fallback to empty if deck not found
+  useEffect(() => {
+    if (!deck) return;
+    console.log('Deck parameter:', deck);
+    if (deckDataMap[deck]) {
+      // Hardcoded deck
+      setDeckData(deckDataMap[deck]);
+      setDeckTitle(deck.replace('-', ' ').toUpperCase());
+    } else {
+      // User-created deck, fetch from backend
+      const fetchDeckData = async () => {
+        try {
+          let res;
+          if (isValidObjectId(deck)) {
+            res = await axios.get(`/api/decks?id=${deck}`);
+          } else {
+            // URL-encode the deck name to handle special characters
+            const encodedDeckName = encodeURIComponent(deck);
+            res = await axios.get(`/api/deck?deckName=${encodedDeckName}`);
+          }
+          setDeckData(res.data.cards);
+          setDeckTitle(res.data.deckName);
+        } catch (error) {
+          console.error('Error fetching deck data:', error);
+        }
+      };
+      fetchDeckData();
+    }
+  }, [deck]);
 
   const flipCard = () => setIsFlipped(!isFlipped);
 
   return (
     <div className="flashcard-container">
-      <div className="timer"><Timer></Timer></div>
-      <h2 className="deck-title">{deck?.replace('-', ' ').toUpperCase()}</h2> {/* Display deck title */}
+      <div className="timer"><Timer /></div>
+      <h2 className="deck-title">{deckTitle}</h2>
       {deckData.length > 0 ? (
         <div className={`flashcard ${isFlipped ? 'flipped' : ''}`} onClick={flipCard}>
           <div className="front">
@@ -127,21 +157,17 @@ const DeckPage = () => {
         </div>
       ) : (
         <p>No questions available for this topic.</p>
-        
       )}
-      <div className="stopwatch"><StopWatch>HERE</StopWatch></div>
-      <div className="cardNum">Card: {currentCard+1}/{deckData.length}</div>
+      <div className="stopwatch"><StopWatch /></div>
+      <div className="cardNum">Card: {currentCard + 1}/{deckData.length}</div>
       <div className="controls">
         <button onClick={() => setCurrentCard((currentCard - 1 + deckData.length) % deckData.length)}>←</button>
         <button onClick={() => setCurrentCard((currentCard + 1) % deckData.length)}>→</button>
       </div>
-
       <div className="shuffle">
-        <button onClick={() => setCurrentCard(((Math.floor(Math.random() * deckData.length ))))}>SHUFFLE</button>
+        <button onClick={() => setCurrentCard(Math.floor(Math.random() * deckData.length))}>SHUFFLE</button>
       </div>
-      
       <div className="sidebar"><Navbar /></div>
-     
     </div>   
   );
 };
