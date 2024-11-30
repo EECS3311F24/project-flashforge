@@ -1,7 +1,7 @@
-# **Sprint 2 Planning Meeting (Sprint2)**
+# **Sprint 3 Planning Meeting (Sprint3)**
 
 ### Meeting Details
-- **Date:** Nov 5th, Tuesday after 3311 Lab
+- **Date:** Nov 19th, Tuesday after 3311 Lab
 - **Time:** 11:30 AM
 - **Location:** Online (Discord server)
 - **Agenda:** Discuss release goals, key features/epics, and assign tasks.
@@ -17,22 +17,20 @@
 ---
 
 ### Sprint Goal
-The primary objective of Sprint 2 is to continue the basic framework while adding necessary features for the project. The focus will be on completing essential user stories related to core functionality, including flashcard shuffle, quiz mode, and Stopwatches.
+The primary objective of Sprint 3 is to Finish the basic framework while adding necessary features for the project. The focus will be on completing essential user stories related to core functionality, including creating deck features, My deck features for each user, re-designing the quiz features, and adding in share functionality. 
 
 ---
 
-### User Stories for Sprint 1
-**Completed during Sprint 1:**
-- **US-(3):** Using the shuffle deck feature
+### User Stories for Sprint 3
+**Completed during Sprint 3:**
+- **US-(1):** Creating a deck
   *Priority:* High
-- **US-(8):** Completing a timed trial
+- **US-(19):** Share feature (study tips)
   *Priority:* Medium
-- **US-(10):** Filter & search bar
+- **US-(20):** Share feature (flashcards)
   *Priority:* Medium
-  - **US-(11):** Set user courses in settings, recommended decks will follow user settings
-  *Priority:* Medium
-- **US-(12):** Completing a timed quiz
-  *Priority:* Medium
+  - **US-(16):** Study Tips page
+  *Priority:* low
 
 ---
 
@@ -57,7 +55,7 @@ The primary objective of Sprint 2 is to continue the basic framework while addin
 
 ### Task Breakdown
 
-- **US-(3): Using the shuffle deck feature**
+- **US-(1): Creating a deck**
   - **Mame Mor Mbacke:** Frontend design and page layout for user story
   - **Oluwasegun Oroge:** Frontend design and page layout for user story
   - **Tamjeed Shariff:** Implement backend logic for user story
@@ -65,29 +63,23 @@ The primary objective of Sprint 2 is to continue the basic framework while addin
 <br />
 
 
-- **US-(8): Completing a timed trial**
+- **US-(19): Share feature (study tips)**
   - **Mame Mor Mbacke:** Frontend design and page layout for user story
   - **Oluwasegun Oroge:** Frontend design and page layout for user story
   - **Tamjeed Shariff:** Implement backend logic for user story
   - **Leroy-David Musa:** Implement backend logic for user story  
 <br />
 
-- **US-(10): Filter & search bar**
+- **US-(20): Share feature (flashcards)**
   - **Mame Mor Mbacke:** Frontend design and page layout for user story
   - **Oluwasegun Oroge:** Frontend design and page layout for user story
   - **Tamjeed Shariff:** Implement backend logic for user story
   - **Leroy-David Musa:** Implement backend logic for user story
 <br />
 
-- **US-(11): Set user courses in settings, recommended decks will follow user settings**
+- **US-(16): Study Tips page**
   - **Mame Mor Mbacke:** Frontend design and page layout for user story
   - **Oluwasegun Oroge:** Frontend design and page layout for user story
   - **Tamjeed Shariff:** Implement backend logic for user story
   - **Leroy-David Musa:** Implement backend logic for user story
 <br />
-
-- **US-(12): Completing a timed quiz**
-  - **Mame Mor Mbacke:** Frontend design and page layout for user story
-  - **Oluwasegun Oroge:** Frontend design and page layout for user story
-  - **Tamjeed Shariff:** Implement backend logic for user story
-  - **Leroy-David Musa:** Implement backend logic for user story
