@@ -4,6 +4,8 @@ import Timer from './Timer';
 import StopWatch from './StopWatch';
 import Navbar from '../../components/Navbar'; 
 import axios from 'axios';
+import jsPDF from 'jspdf';
+import 'font-awesome/css/font-awesome.min.css';
 
 function isValidObjectId(id) {
   return /^[0-9a-fA-F]{24}$/.test(id);
@@ -132,6 +134,8 @@ const DeckPage = () => {
           }
           setDeckData(res.data.cards);
           setDeckTitle(res.data.deckName);
+
+          // Like java exceptions, throw error if no deck exists.
         } catch (error) {
           console.error('Error fetching deck data:', error);
         }
@@ -140,10 +144,55 @@ const DeckPage = () => {
     }
   }, [deck]);
 
+  const downloadPDF = (deck) => {
+    console.log('Deck data for PDF:', deck); // Debugging, to check if there's actually existing data for a deck
+
+    const doc = new jsPDF();
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(16);
+    doc.text(deck.deckName, 10, 10);
+
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(12);
+
+    const margin = 10; // Left of the page margin
+    const maxWidth = 190; // Max width before going to next line on a question/answer
+    const pageHeight = doc.internal.pageSize.height; // Calculate height of pdf page
+    let yOffset = 20; // Initial offset for the first question in the deck
+
+    if (deck.cards && deck.cards.length > 0) {
+        deck.cards.forEach((card, index) => {
+            // Check if the yOffset is too close to the bottom of the page
+            if (yOffset + 20 > pageHeight) {
+                doc.addPage(); // Add a new page
+                yOffset = 20; // Reset yOffset for the new page
+            }
+
+            // Make sure new line is created for longer questions
+            const questionLines = doc.splitTextToSize(`${index + 1}. Question: ${card.question}`, maxWidth);
+            doc.text(questionLines, margin, yOffset);
+            yOffset += questionLines.length * 5; 
+
+            // Make sure new line is created for longer answers
+            const answerLines = doc.splitTextToSize(`   Answer: ${card.answer}`, maxWidth);
+            doc.text(answerLines, margin, yOffset);
+            yOffset += answerLines.length * 5 + 10; // Adjust for multiple lines of answer + some extra space
+        });
+    } else {
+        doc.text('No cards in this deck.', margin, yOffset);
+    }
+
+    console.log('API Response:', deck.cards);
+    doc.save(`${deck.deckName}.pdf`); // Saves the pdf under the name of user selected deck
+};
+
+
+
   const flipCard = () => setIsFlipped(!isFlipped);
 
   return (
     <div className="flashcard-container">
+      
       <div className="timer"><Timer /></div>
       <h2 className="deck-title">{deckTitle}</h2>
       {deckData.length > 0 ? (
@@ -165,9 +214,13 @@ const DeckPage = () => {
         <button onClick={() => setCurrentCard((currentCard + 1) % deckData.length)}>→</button>
       </div>
       <div className="shuffle">
-        <button onClick={() => setCurrentCard(Math.floor(Math.random() * deckData.length))}>SHUFFLE</button>
+        <button onClick={() => setCurrentCard(Math.floor(Math.random() * deckData.length))} title = "Shuffle deck"><i className="fa fa-random" ></i></button>
       </div>
       <div className="sidebar"><Navbar /></div>
+      <button onClick={() => downloadPDF({ deckName: deckTitle, cards: deckData })} className="download-btn" title = "Download flashcard deck">
+  <i className="fa fa-download"></i> 
+</button>
+
     </div>   
   );
 };

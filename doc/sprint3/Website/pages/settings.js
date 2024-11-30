@@ -80,8 +80,11 @@ export default function Settings() {
               )}
               onChange={handlePreferencesChange}
             />
+            
           </div>
+          
         </div>
+        
       </div>
       <div className="sidebar"><Navbar /></div>
     </div>

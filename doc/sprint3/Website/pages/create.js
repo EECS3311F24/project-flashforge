@@ -66,7 +66,9 @@ export default function Create() {
   };
 
   return (
+    
     <div className="create-container">
+      <div className="sidebar"><Navbar /></div>
       <h2>Create a New Deck</h2>
       <form className="deck-form" onSubmit={handleSubmit}>
         <input
@@ -103,12 +105,14 @@ export default function Create() {
             />
           </div>
         ))}
+        
         <button type="button" onClick={addCard} className="add-card-btn">
           Add Another Card
         </button>
 
         {/* Submit / Finish button */}
         <div className="submit-container">
+          
           <button type="submit" className="submit-btn">
             Finish
           </button>
@@ -117,10 +121,8 @@ export default function Create() {
 
       {/* Display messages to the user */}
       <p>{message}</p>
-
-      <div className="sidebar">
-        <Navbar />
-      </div>
+      
+      
     </div>
   );
 }

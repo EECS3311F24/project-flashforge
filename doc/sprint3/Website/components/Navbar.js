@@ -20,10 +20,17 @@ const Navbar = () => {
     <nav>
       <ul>
         <li><Link href="/">Home</Link></li>
-        <li><Link href="/login">Login</Link></li>
+        {!username && <li><Link href="/login">Login</Link></li>}
+        
         {username && <li><Link href="/my-decks">My Decks</Link></li>}
         <li><Link href="/create">Create Deck</Link></li>
-        <li><Link href="/settings">Settings</Link></li>
+        {username ? (
+          <div>
+            <li><Link href="/settings">Profile</Link></li>
+          </div>
+        ) : <li><Link href="/settings">Settings</Link></li>} 
+        
+        <li><Link href="/tipforum">Study Forge</Link></li>
 
         {username && (
           <div>

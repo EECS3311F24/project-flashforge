@@ -61,7 +61,9 @@ export default function AuthPage() {
 
   return (
     <div className="auth-container">
+      
       <div className="form-section">
+        
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
           <input 
@@ -104,7 +106,6 @@ export default function AuthPage() {
       </div>
 
       <p className="message">{message}</p>
-      
       <div className="sidebar"><Navbar /></div>
     </div>
   );

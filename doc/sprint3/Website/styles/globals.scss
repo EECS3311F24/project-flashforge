@@ -39,7 +39,9 @@ textarea {
 
 /* Content container */
 .content-container {
-    margin-left: 240px; /* Matches the sidebar width */
+
+    margin-left: 200px; /* Matches the sidebar width */
+    text-align: center;
     padding: 20px;
     flex: 1;
 }
@@ -64,6 +66,7 @@ textarea {
   
   .category-box {
     border: 1px solid #ddd;
+    align-items: center;
     padding: 20px;
     width: 200px;
     cursor: pointer;
@@ -169,7 +172,7 @@ textarea {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 200px;
+    width: 250px;
     background-color: #2c3e50;
     color: #fff;
     padding: 20px;
@@ -229,7 +232,8 @@ textarea {
 
 /* Main content */
 .main-content {
-    margin-left: 240px;
+    margin-left: 280px;
+    text-align: center;
     padding: 40px 20px;
 }
 
@@ -310,21 +314,24 @@ body {
 .shuffle {
     position: relative;
     bottom: 103px;
-    right: 250px;
+    right: 280px;
 }
 
 .shuffle button {
     position: relative;
-    background-color: #998b8b;
-    color: white;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
-    font-size: 10px;
+    font-size: 13px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
+.shuffle button:hover{
+    background-color: #e5e2e2;
+}
 
 /* Timer Quiz */
 
@@ -359,6 +366,10 @@ body {
     transition: background-color 0.3s;
 }
 
+.timer button:hover{
+    background-color: #d35400;
+}
+
 /* Timer Stopwatch */
 .stopwatch{
     position: absolute;
@@ -387,6 +398,9 @@ body {
     transition: background-color 0.3s;
 }
 
+.stopwatch button:hover{
+    background-color: #d35400;
+}
 // .quiz{
 
 // }
@@ -463,10 +477,7 @@ button {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover {
-    background-color: #d35400;
-    transform: translateY(-2px);
-}
+
 
 /* Deck Creation Page */
 .create-container {
@@ -695,6 +706,24 @@ p {
     transform: translateY(-2px);
 }
 
+.download-btn{
+    position: relative;
+    bottom: 460px;
+    right: 280px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover{
+    background-color: #e5e2e2;
+}
+
 /* Card List Styling */
 .card-list {
     margin-top: 20px;
@@ -786,4 +815,217 @@ p {
     .card-list {
         padding: 0 20px;
     }
+}
+
+/* STUDY FORUM STYLING */
+
+/* Study Forum Container */
+.study-forum-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Study Forum Header */
+.study-forum-header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Forum Post Section */
+.forum-post {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+/* Forum Post Title */
+.forum-post h3 {
+    font-size: 22px;
+    color: #2980b9;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Forum Post Content */
+.forum-post p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* User Info in Forum Post */
+.forum-post .user-info {
+    font-size: 14px;
+    color: #95a5a6;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Post Actions (Reply, Like, etc.) */
+.forum-post-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.forum-post-actions button {
+    padding: 8px 16px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forum-post-actions button:hover {
+    background-color: #d35400;
+}
+
+
+/* Forum Post Form */
+
+.forum-post-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn button{
+    background-color: #000000;
+}
+
+.forum-post-form input,
+.forum-post-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.forum-post-form input:focus,
+.forum-post-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.forum-post-form button {
+    padding: 12px 20px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forum-post-form button:hover {
+    background-color: #d35400;
+}
+
+/* Forum Filters (Category, Date, etc.) */
+.forum-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.forum-filters select,
+.forum-filters input[type="text"] {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ecf0f1;
+    transition: border-color 0.3s;
+}
+
+.forum-filters select:focus,
+.forum-filters input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Responsive Styles for Study Forum */
+@media (max-width: 768px) {
+    .study-forum-container {
+        padding: 20px;
+    }
+
+    .forum-post-form input,
+    .forum-post-form textarea {
+        max-width: 100%;
+    }
+
+    .forum-filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Forum Comment Styling */
+.forum-comment {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forum-comment .user-info {
+    font-size: 14px;
+    color: #95a5a6;
+    margin-top: 10px;
+}
+
+.forum-comment .comment-content {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.forum-comment .comment-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.forum-comment .comment-actions button {
+    padding: 6px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forum-comment .comment-actions button:hover {
+    background-color: #d35400;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Navbar from '../components/Navbar'; 
 
 export default function Home() {
   const [username, setUsername] = useState('');
@@ -36,24 +37,7 @@ export default function Home() {
 
   return (
     <div className="app-container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/login">Login</Link></li>
-          {username && <li><Link href="/my-decks">My Decks</Link></li>}
-          <li><Link href="/create">Create Deck</Link></li>
-          <li><Link href="/settings">Settings</Link></li>
-        </ul>
-        {username && (
-          <div>
-            <p className="username-display">Logged in as: {username}</p>
-            <button onClick={handleSignOut} className="sign-out-button">
-              Sign Out
-            </button>
-          </div>
-        )}
-      </div>
+      
       {/* Main Content */}
       <div className="main-content">
         <h1>Welcome to FlashForge!</h1>
@@ -81,7 +65,9 @@ export default function Home() {
             <p>No decks match your search or preferences.</p>
           )}
         </div>
+        <div className="sidebar"><Navbar /></div>
       </div>
+      
     </div>
   );
 }
