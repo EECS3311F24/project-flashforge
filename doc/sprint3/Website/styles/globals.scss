@@ -401,13 +401,96 @@ body {
 .stopwatch button:hover{
     background-color: #d35400;
 }
-// .quiz{
+/*Quiz*/
+    .quiz-container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
 
-// }
+      .options button {
+        background-color: #e67e22;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 5px;
+        width: 100%;
+        text-align: center;
+      } 
+      .options button:hover {
+        color: #fff; /* White text */
 
-// .stopwatch{
-
-// }
+      }
+      
+      .options button.selected {
+        background-color: #3f648b; /* Blue background */
+        color: #fff; /* White text */
+        border-color: #0056b3; /* Darker blue border */
+      }
+      button.Submit {
+        font-size: 16px; /* Adjust size to your preference */
+        color: white; /* Ensure the text color is white */
+        background-color: #4CAF50; /* A contrasting background color */
+        padding: 10px 20px; /* Adjust padding to make the button larger */
+        border: none; /* Remove any border */
+        border-radius: 5px; /* Optional: rounded corners */
+        cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+        text-align: center; /* Ensure text is centered */
+      }
+      
+      button.Submit:hover {
+        background-color: #45a049; /* Darker shade when hovering */
+      }
+      
+      button.Submit:focus {
+        outline: none; /* Remove the default outline */
+      }
+      .centralize-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Space above the button */
+      }
+      
+      .back-to-flashcards {
+        background-color: #e47e22;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .back-to-flashcards:hover {
+        background-color: #0056b3;
+      }
+      .centralize-quiz-over {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .quiz-results-container {
+        padding: 20px; /* Add padding inside the results container */
+        margin-left: 300px; /* Push the content away from the sidebar */
+        max-width: calc(100% - 260px); /* Ensure it doesn't exceed the available width */
+        background-color: #ffffff; /* Optional: Add a background for better visibility */
+        border-radius: 5px; /* Optional: Round corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+        margin-right: 20px; /* Push the content away from the sidebar */
+      }
+      
+      .question-result {
+        margin-bottom: 15px; /* Add spacing between questions */
+        border-bottom: 1px solid #eee; /* Optional: Divider between questions */
+        padding-bottom: 10px; /* Add spacing inside each result */
+      }
+      
+      .question-result p {
+        margin: 5px 0; /* Space out paragraphs inside the question result */
+      }
 /* Controls */
 .controls {
     display: flex;
@@ -425,9 +508,6 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
-
-
 
 .controls button:hover {
     background-color: #d35400; /* Dark orange */
@@ -461,7 +541,7 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #3498db;
+    border-color: #db6e34;
     outline: none;
 }
 
@@ -469,7 +549,7 @@ input[type="password"]:focus {
 button {
     padding: 10px 20px;
     background-color: #e67e22;
-    color: white;
+    color: #fdfcfa;
     border: none;
     border-radius: 5px;
     cursor: pointer;
