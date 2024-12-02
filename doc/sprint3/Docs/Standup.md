@@ -1,236 +1,242 @@
-﻿**[November 6th, 2024] - Sprint 2 Standup 1**
+## [November 22, 2024] - Sprint 3 Standup 1
 
-Tamjeed Shariff:
+**Mame Mor Mbacke:**
 
 What did you work on since the last standup?
 
-Ans: Cleaning up and fixing backend integration from last sprint.
+Ans: Began planning and development of the share deck feature. Website runs on localhost so integration of a pdf download was started
 
 What do you commit to next?
 
-Ans: Backend implementation of upcoming user stories starting with decks.
+Ans: Begin implementation of a study tips page where users can share and read posts
 
-When do you think you'll be done? 
+When do you think you'll be done?
 
-Ans: By next standup.
+Ans: By November 26, 2024
 
-Do you have any blockers? 
+Do you have any blockers?
+
+Ans: Not at the moment
+
+
+**Tamjeed Shariff:**
+
+What did you work on since the last standup?
+
+Ans: Started the planning and implementation of the create a deck feature
+
+What do you commit to next?
+
+Ans: Continue developing the create a deck feature 
+
+When do you think you'll be done?
+
+Ans: By November 26, 2024
+
+Do you have any blockers?
 
 Ans: Not currently.
 
 
-Mame Mor Mbacke:
+**Oluwasegun Oroge:**
 
 What did you work on since the last standup?
 
-Ans: : Worked on flashcard shuffle function and added card number visibility in deck to make it visually easier for users to understand how long a deck is, and how far into a deck they are. 
+Ans: Cleaning and fixing frontend implementation from the previous sprint.
 
 What do you commit to next?
 
-Ans: Implementing a stopwatch and timer feature so the deck page has more usable features .
+Ans: Creating a database for the multiple-choice options for each question in the pre-made decks. 
 
-When do you think you'll be done? 
-
-Ans: By the next standup.
-
-Do you have any blockers? 
-
-Ans: Not at the moment.
-
-
-Oluwasegun Oroge:
-
-What did you work on since the last standup?
-
-Ans: Assisted with flashcard shuffle function and cleaning and fixing frontend integration from last sprint.
-
-What do you commit to next?
-
-Ans: Working on timer feature. 
-
-When do you think you'll be done? 
+When do you think you'll be done?
 
 Ans: Before next standup
 
-Do you have any blockers? 
+Do you have any blockers?
 
-Ans: Not at the moment 
+Ans: Not at the moment
 
 
-Leroy-David Musa:
+**Leroy-David Musa:**
 
 What did you work on since the last standup?
 
-Ans: Assisted with cleaning up and fixing backend integration from the last sprint.
+Ans: Assisted with initial setup and brainstorming for features development.
 
 What do you commit to next?
 
-Ans: Supporting backend implementation of upcoming user stories, starting with decks.
+Ans: Supporting the implementation of the "Create a Deck" feature.
 
-When do you think you'll be done? 
+When do you think you'll be done?
 
 Ans: By the next stand-up.
 
-Do you have any blockers? 
-
-Ans: Not currently.
-
-
-
-
-**[November 9th, 2024] - Sprint 2 Standup 2**
-
-Tamjeed Shariff:
-
-What did you work on since the last standup?
-
-Ans: Backend implementation of upcoming user stories with decks.
-
-What do you commit to next?
-
-Ans: Backend implementation of setting page.
-
-When do you think you'll be done? 
-
-Ans: By next stand-up.
-
-Do you have any blockers? 
-
-Ans: Not currently.
-
-
-Mame Mor Mbacke:
-
-What did you work on since the last standup?
-
-Ans: Completed stopwatch timer and quiz timer button functionality, timers appear only after button press.
-
-What do you commit to next?
-
-Ans: Implementing course preference settings which change on a user-by-user basis.
-
-When do you think you'll be done? 
-
-Ans: By the next standup
-
-Do you have any blockers? 
-
-Ans: Not at the moment 
-
-
-Oluwasegun Oroge:
-
-What did you work on since the last standup? 
-
-Ans: Assisted with the stopwatch timer and quiz timer button functionality.
-
-What do you commit to next? 
-
-Ans: Working on the course preference settings.
-
-When do you think you'll be done? 
-
-Ans: By the next standup 
-
-Do you have any blockers? 
+Do you have any blockers?
 
 Ans: Not at the moment.
 
 
-Leroy-David Musa:
+
+
+
+
+## [November 26, 2024] - Sprint 3 Standup 2
+
+**Mame Mor Mbacke:**
 
 What did you work on since the last standup?
 
-Ans: Assisted with the backend implementation of user stories related to decks.
+Ans: Completed the deck download feature, users can now download any deck in PDF format. Began development of study tips forum page
 
 What do you commit to next?
 
-Ans: Supporting the backend implementation of the settings page.
+Ans: Completing the study tips forum page and making quality of life changes to the website
 
-When do you think you'll be done? 
+When do you think you'll be done?
 
-Ans: By the next stand-up.
+Ans: By November 28th 2024
 
-Do you have any blockers? 
+Do you have any blockers?
 
-Ans: Not currently.
-
-
+Ans: Not at the moment
 
 
-**[November 13 , 2024] - Sprint 2 Standup 3**
-
-Tamjeed Shariff:
+**Tamjeed Shariff:**
 
 What did you work on since the last standup?
 
-Ans: Backend implementation of setting page.
+Ans: Completed the create a deck feature 
 
 What do you commit to next?
 
-Ans: Backend implementation of creating decks
+Ans: Completing the my decks feature to display your personal decks
 
-When do you think you'll be done? 
+When do you think you'll be done?
 
-Ans: During Sprint 3.
+Ans: By November 28, 2024
 
-Do you have any blockers? 
+Do you have any blockers?
 
 Ans: Not currently
 
 
-Mame Mor Mbacke:
+**Oluwasegun Oroge:**
 
 What did you work on since the last standup?
 
-Ans: Implemented course preference settings on the settings page for more personalized home page recommendations 
+Ans: Completed the multiple choice options for each question in the pre-made decks. 
 
 What do you commit to next?
 
-Ans: Expanding on the quiz feature by adding multiple choice questions and a correct answer.
+Ans: Implementing the quiz mode feature so that the user can test their knowledge by taking a timed multiple choice quiz.
 
-When do you think you'll be done? 
+When do you think you'll be done?
 
-Ans: By the beginning of sprint 3
+Ans: By the next standup
 
-Do you have any blockers? 
+Do you have any blockers?
+
+Ans: Not at the moment.
+
+
+**Leroy-David Musa:**
+
+What did you work on since the last standup?
+
+Ans: Assisted with testing and refining the "Create a Deck" feature.
+
+What do you commit to next?
+
+Ans: Supporting the development of the "My Decks" feature.
+
+When do you think you'll be done?
+
+Ans: By the next stand-up.
+
+Do you have any blockers?
+
+Ans: Not at the moment.
+
+
+
+
+
+
+
+## [November 28, 2024] - Sprint 3 Standup 3
+
+**Mame Mor Mbacke:**
+
+What did you work on since the last standup?
+
+Ans: Completed study tips forum page with the name ‘Study Forge’. Changed page label names on sidebar depending on state of user being logged in or signed out
+
+What do you commit to next?
+
+Ans: Refining styling of Flashforge, making the web page more visually appealing under UI and UX design principles
+
+When do you think you'll be done?
+
+Ans: Dec 7th 2024 (If another sprint was required)
+
+Do you have any blockers?
 
 Ans: Not at the moment
 
 
-Oluwasegun Oroge:
+**Tamjeed Shariff:**
 
-What did you work on since the last standup? 
+What did you work on since the last standup?
 
-Ans: Assisted in implementaton of the course preference settings on the settings page.
+Ans: Completed my decks feature to display the users created decks
 
 What do you commit to next?
 
-Ans: Multiple choize quizzes.
+Ans: More backend testing and sprint docs 
 
-When do you think you'll be done? 
+When do you think you'll be done?
 
-Ans: By the next stand-up 
+Ans: By end of sprint
 
-Do you have any blockers? 
+Do you have any blockers?
+
+Ans: Not currently
+**
+
+
+**Oluwasegun Oroge:**
+
+What did you work on since the last standup?
+
+Ans: Completed the implementation of the quiz mode feature.
+
+What do you commit to next?
+
+Ans: Improving the overall user interface display to enhance the user experience.
+
+When do you think you'll be done?
+
+Ans: By the end of this sprint.
+
+Do you have any blockers?
 
 Ans: Not at the moment
 
 
-Leroy-David Musa:
+**Leroy-David Musa:**
 
 What did you work on since the last standup?
 
-Ans: Assisted with the backend implementation of the settings page.
+Ans: Completed the dark theme and light theme functionality, allowing users to switch between the two.
 
 What do you commit to next?
 
-Ans: Supporting the backend implementation of creating decks.
+Ans: Prepare for Sprint 2 tasks and review any outstanding requirements for Sprint 1.
 
-When do you think you'll be done? 
+When do you think you'll be done?
 
-Ans: During Sprint 3.
+Ans: By the next stand-up.
 
-Do you have any blockers? 
+Do you have any blockers?
 
 Ans: Not currently.
