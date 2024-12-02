@@ -81,6 +81,25 @@ If you haven't installed MongoDB locally, you can use MongoDB Atlas, a cloud dat
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
+---
+
+## **Features**
+
+- **Customizable Decks**: Create and manage flashcards across various subjects.
+- **Collaboration**: Share decks and study tips with peers.
+- **Active Recall Techniques**: Enhance learning through randomized quiz modes.
+- **Deck Export**: Download decks as PDFs using `jspdf`.
+- **Interactive Icons**: Powered by Font Awesome.
+
+To add PDF download functionality and icons, install the following packages:
+
+```bash
+npm install jspdf
+npm install --save font-awesome
+```
+
+---
+
 ## Contribution Guidelines
 
 We follow the guidelines below for contributions:
