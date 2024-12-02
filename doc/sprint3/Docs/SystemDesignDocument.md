@@ -2,11 +2,11 @@
 
 **Project Name:** FlashForge
 
-**Sprint:** 1
+**Sprint:** 3
 
 **Document Version:** 1.0.0
 
-**Date:** 03/11/2024 [DD/MM/YYYY]
+**Date:** 01/12/2024 [DD/MM/YYYY]
 
 ---
 
@@ -99,13 +99,33 @@ Below is a high-level description of core classes/modules using **CRC Cards**. E
 | **Parent Class:** None |
 | **Subclasses:** None |
 | **Responsibilities:** |
-| - Perform CRUD operations for flashcards and decks. |
-| - Manage user interactions with flashcards (e.g., flipping cards, tracking progress). |
-| - Interface with collaboration tools for sharing decks. |
+| - Manage user flashcards and decks, including creation, retrieval, and editing of decks. |
+| - Interface with backend APIs to interact with deck data. |
+| - Display and manage flashcards under each deck. |
+| - Handle user interactions for creating, viewing, and deleting decks. |
+| - Includes the **`MyDecks`** functionality to allow users to view their decks and navigate to individual deck pages. |
 | **Collaborators:** |
-| - `mongodb.js` (for database interactions) |
-| - Frontend pages like `create.js`, `decks.js`, `fullscreenDeck.js` |
-| - `UserManager` (to associate decks with users) |
+| - `mongodb.js` (for database interactions). |
+| - `Navbar` (for navigation and user authentication). |
+| - `UserManager` (to associate decks with users). |
+| - `MyDecks.js` (for rendering a list of user decks). |
+| - Frontend components such as `Link` (for navigation). |
+
+#### Class: `MyDecks` (As part of `FlashcardManager`)
+
+| **Class Name:** `MyDecks` |
+| --- |
+| **Parent Class:** `FlashcardManager` |
+| **Subclasses:** None |
+| **Responsibilities:** |
+| - Display all flashcard decks associated with a logged-in user. |
+| - Fetch decks from the backend API using the logged-in user's credentials. |
+| - Handle errors during the fetch process and display appropriate messages to the user. |
+| - Provide links to view individual decks for detailed study. |
+| **Collaborators:** |
+| - `Navbar` (renders the navigation bar). |
+| - `/api/get-decks` (backend API endpoint to fetch user decks). |
+| - Frontend components such as `Link` from `Next.js` for navigation. |
 
 #### Class: `Navbar`
 
@@ -120,6 +140,24 @@ Below is a high-level description of core classes/modules using **CRC Cards**. E
 | **Collaborators:** |
 | - Frontend pages in `/pages` directory |
 | - `UserManager` (to determine authenticated state) |
+
+#### Class: `MyDecks`
+
+| **Class Name:** `MyDecks` |
+| --- |
+| **Parent Class:** None |
+| **Subclasses:** None |
+| **Responsibilities:** |
+| - Display all flashcard decks associated with a logged-in user. |
+| - Fetch decks from the backend API using the logged-in user's credentials. |
+| - Handle errors during the fetch process and display appropriate messages to the user. |
+| - Provide links to view individual decks for detailed study. |
+| **Collaborators:** |
+| - `Navbar` (renders the navigation bar). |
+| - `/api/get-decks` (backend API endpoint to fetch user decks). |
+| - Frontend components such as `Link` from `Next.js` for navigation. |
+
+---
 
 #### Interaction Between Classes
 
